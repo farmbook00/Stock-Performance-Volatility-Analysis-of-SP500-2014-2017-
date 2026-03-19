@@ -1,1 +1,21 @@
+/* 
+=================================================================================
+BULK LOADING THE TABLE 'SP.Stock_prices_2014_2017'
+=================================================================================
+SCRIPT PURPOSE:
+	THIS SCRIPT WOULD LOAD THE SP.STOCK_PRICE_2014_2017 FROM AN EXTERNAL CRM FILE
+	It performs the following actions:
+    - Truncates the tables before loading data.
+    - Uses the `BULK INSERT` command to load data from csv Files to the table.
+=================================================================================
+*/
+TRUNCATE TABLE SP.Stock_Prices_2014_2017;
+
+BULK INSERT SP.Stock_Prices_2014_2017
+FROM 'C:\Users\USER\OneDrive\Desktop\mi data project\online data\S&P 500 Stock Prices 2014-2017.CSV'
+WITH (
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK 
+);
 
