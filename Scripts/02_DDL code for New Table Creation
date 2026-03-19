@@ -1,1 +1,21 @@
+/*
+===============================================================================
+DDL Script: Create SP TABLE
+===============================================================================
+Script Purpose:
+    This script creates tables in the 'SP' schema, dropping existing tables 
+    if they already exist.
+	  Run this script to re-define the DDL structure of 'SP' Tables
+===============================================================================
+*/
+IF OBJECT_ID ('SP.Stock_Prices_2014_2017' , 'U') IS NOT NULL
+	DROP TABLE SP.Stock_Prices_2014_2017;
+CREATE TABLE SP.Stock_Prices_2014_2017(
+	SYMBOL NVARCHAR(10),
+	TRADING_DATE DATE,
+	OPEN_PRICE NVARCHAR(50),
+	DAY_HIGH NVARCHAR(50),
+	DAY_LOW NVARCHAR(50),
+	CLOSE_PRICE NVARCHAR(50),
+	VOLUME NVARCHAR(50));
 
