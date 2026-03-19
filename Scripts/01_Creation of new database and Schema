@@ -1,1 +1,17 @@
+/*
+=========================================================================================
+CREATE DATABASE AND SCHEMA
+=========================================================================================
+Script Purpose:
+    This script creates A NEW DATABASE NAMED 'S_AND_P_500' AND ALSO A SCHENA CALLED 'SP'
+========================================================================================
+*/
+
+USE MASTER;
+
+CREATE DATABASE S_AND_P_500;
+
+USE S_AND_P_500;
+
+CREATE SCHEMA SP;
 
